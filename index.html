@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+<header class="header">
+    <div class="menu container">
+      <a href="#" class="logo">AlimentAcción</a>
+      <input type="checkbox" id="menu" />
+      <label for="menu">
+         <img src="img/menu.png" class="menu-icono" alt="menu">
+      </label>
+       <nav class="navbar">
+        <ul class="nav">
+            <li><a href="index.html">Inicio</a></li>
+
+            <li>
+             <a href="ejercicios.html">Ejercicios</a>
+                <ul >
+                 <li><a href="pecho.html">Pecho</a></li>
+                  <li><a href="espalda.html">Espalda</a></li>
+                   <li><a href="pierna.html">Pierna</a></li>
+                   <li><a href="hombro.html">Hombro</a></li>
+                   <li><a href="BRAZO.HTML">Brazo</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="dietas.html">Dietas</a>
+                 <ul>
+                    <li><a href="dietavegana.html">Dieta Vegana</a></li>
+                    <li><a href="dietapuntos.html">Dieta por Puntos</a></li>
+                    <li><a href="dietabayter.html">Dieta del Dr. Bayter</a></li>
+                    <li><a href="dietacarnivora.html">Dieta Carnívora</a></li>
+                 </ul>
+            </li>
+
+            <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+            <li> <a href="tienda.html">Tienda</a> </li>
+        </ul>
+       </nav>
+    </div>
+
+
+    
+          
+
+    <div class="header-content container">
+      <center> <div class="header-txt">
+       <h1>¿Que ofrecemos?</h1>
+         <p>En esta página queremos darle solución a un problema que sufren muchas de las personas 
+         jóvenes, que es el sobrepeso y la vida poco saludable; por lo que hemos decidido como  
+         proyecto mejorar la vida de estas personas a través de esta página informativa y creativa.
+         Sin necesidad de tener que instalar aplicaciones, las cuales en la mayoría de casos no  
+         personas quieran abandonar el proceso llevan a nada y hacen que estas </p>
+         
+ 
+        
+     </div>
+     <div>
+        <html lang="es">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Carrusel de Imágenes Automático</title>
+
+<div>
+</head>
+<body>
+
+<div class="carousel-container">
+    <div class="carousel-slide">
+        <img src="img/inicio-removebg-preview.png" alt="Imagen 1">
+    </div>
+    <div class="carousel-slide">
+        <img src="img/Captura_de_pantalla_2024-09-19_172737-removebg-preview.png" alt="Imagen 2">
+    </div>
+    <div class="carousel-slide">
+        <img src="img/th-removebg-preview.png" alt="Imagen 3">
+    </div>
+    <div class="carousel-slide">
+        <img src="img/_3c74bfd6-aa09-4f39-ae50-9e6636591679-removebg-preview.png" alt="Imagen 4">
+    </div>
+    <div class="carousel-slide">
+        <img src="img/_6f65bbc4-7154-43f1-ae9a-bdbfa8f074d7-removebg-preview.png" alt="Imagen 5">
+    </div>
+
+    
+
+<div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+    let slideIndex = 0;
+    autoShowSlides(); 
+
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n - 1);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("carousel-slide");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n >= slides.length) { slideIndex = 0 }
+        if (n < 0) { slideIndex = slides.length - 1 }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+    }
+
+    function autoShowSlides() {
+        let i;
+        let slides = document.getElementsByClassName("carousel-slide");
+        let dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+        setTimeout(autoShowSlides, 3000);
+    }
+</script>
+     </div>
+     
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <center> <title class="logo">Calculadora IMC</title>
+    <script>
+        function calcularIMC() {
+            const peso = parseFloat(document.getElementById('peso').value);
+            const alturaCm = parseFloat(document.getElementById('altura').value);
+            const alturaM = alturaCm / 100; 
+            const imc = peso / (alturaM * alturaM);
+            let clasificacion = '';
+
+            if (imc < 18.5) {
+                clasificacion = 'Bajo peso';
+            } else if (imc < 24.9) {
+                clasificacion = 'Peso normal';
+            } else if (imc < 29.9) {
+                clasificacion = 'Sobrepeso';
+            } else {
+                clasificacion = 'Obesidad';
+            }
+
+            document.getElementById('resultado').innerText = `Tu IMC es: ${imc.toFixed(2)} - ${clasificacion}`;
+        }
+    </script>
+</head>
+<body>
+    <a href="#" class="logo">Calculadora de IMC</a> </center>
+    <center> <h4><label for="peso" class="Calculadora">Peso (kg): </h4></label>
+    <input type="number" id="peso" required>
+    <br>
+    <h4><label for="altura" class="Calculadora">Altura (cm):</label></h4>
+    <input type="number" id="altura" required>
+    <br>
+    <button onclick="calcularIMC()"><h3>Calcular IMC </h3></button>
+    <p id="resultado"></p> </center>
+    
+    <div class="header-img">
+        <center><img src="img/idm-removebg-preview.png" alt=""></center>
+        
+    </div>
+    
+    
+<div>
+    <script>
+        function calcularIMC() {
+            const peso = parseFloat(document.getElementById('peso').value);
+            const alturaCm = parseFloat(document.getElementById('altura').value);
+            const alturaM = alturaCm / 100;
+            const imc = peso / (alturaM * alturaM);
+            let clasificacion = '';
+            let pesoIdeal = 24.9 * (alturaM * alturaM);
+            let mensajePeso = '';
+    
+            if (imc < 18.5) {
+                clasificacion = 'Bajo peso';
+                mensajePeso = `Te falta ${(pesoIdeal - peso).toFixed(2)} kg para alcanzar un peso normal.`;
+            } else if (imc < 24.9) {
+                clasificacion = 'Peso normal';
+            } else if (imc < 29.9) {
+                clasificacion = 'Sobrepeso';
+                mensajePeso = `Tienes ${(peso - pesoIdeal).toFixed(2)} kg de más.`;
+            } else {
+                clasificacion = 'Obesidad';
+                mensajePeso = `Tienes ${(peso - pesoIdeal).toFixed(2)} kg de más.`;
+            }
+    
+            document.getElementById('resultado').innerText = `Tu IMC es: ${imc.toFixed(2)} - ${clasificacion}. ${mensajePeso}`;
+        }
+    </script>
+    
+</div>
+
+<html lang="es"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Volver Arriba</title>
+</head>
+<body>
+
+    <div style="height: 15px;">
+        
+    </div>
+
+    
+
+</div>  
+<center><button id="btnArriba" onclick="irArriba()">Subir</button> </center>
+
+<script>
+window.onload = function() {
+var btn = document.getElementById("btnArriba");
+btn.style.display = "block";
+};
+
+function irArriba() {
+document.body.scrollTop = 0; 
+document.documentElement.scrollTop = 0;
+}
+</script> 
+
+</body>
+</html>   
+
+<footer class="footer container">
+
+    <div class="link">
+        <h3>Facebook</h3>
+        <ul>
+            <li><a href="#">David Reyes</a></li>
+            <li><a href="#">Jordan Castaño</a></li>
+            <li><a href="#">Angel Mendoza</a></li>
+            <li><a href="#">Diego Moncada</a></li>
+        </ul>
+    </div>
+
+    <div class="link">
+        <h3>Instagram</h3>
+        <ul>
+            <li><a href="#">@david_reyes18_</a></li>
+            <li><a href="#">@jordan_acevedo</a></li>
+            <li><a href="#">@angelmendoza</a></li>
+            <li><a href="#">@diego_m.o</a></li>
+        </ul>
+    </div>
+
+    <div class="link">
+        <h3>Tik Tok</h3>
+        <ul>
+            <li><a href="#">@david_reyes1156</a></li>
+            <li><a href="#">@jordancastaño</a></li>
+            <li><a href="#">@angelmendoza</a></li>
+            <li><a href="#">@diegobinario01</a></li>
+        </ul>
+    </div>
+
+    <div class="link">
+        <h3>E-MAIL</h3>
+        <ul>
+            <li><a href="#">jesusreyescuellar7@gmail.com</a></li>
+            <li><a href="#">jcastanoacevedo48@gmail.com</a></li>
+            <li><a href="#">panchitoarroz@gmail.com</a></li>
+            <li><a href="#">diegomoncada0703@gmail.com</a></li>
+        </ul>
+    </div>
+
+</footer>
+
+</body>
+</html>

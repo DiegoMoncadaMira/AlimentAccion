@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tienda.css">
+    <title>Tienda AlimentAcción </title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="menu container">
+                <a href="file:///C:/Users/USUARIO/Downloads/hoy%20%201/hoy%20%201/pagina/index.html" class="logo" style="text-decoration: none">AlimentAcción</a>
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="menu">
+                </label>
+                <nav class="navbar">
+                    <ul class="nav">
+                        <li><a href="index.html">Inicio</a></li>
+
+                        <li>
+                            <a href="ejercicios.html">Ejercicios</a>
+                            <ul>
+                                <li><a href="pecho.html">Pecho</a></li>
+                                <li><a href="espalda.html">Espalda</a></li>
+                                <li><a href="pierna.html">Pierna</a></li>
+                                <li><a href="hombro.html">Hombro</a></li>
+                                <li><a href="BRAZO.HTML">Brazo</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="dietas.html">Dietas</a>
+                            <ul>
+                                <li><a href="dietavegana.html">Dieta Veganas</a></li>
+                                <li><a href="dietapuntos.html">Dieta por Punto</a></li>
+                                <li><a href="dietabayter.html">Dieta del Dr. Bayter</a></li>
+                                <li><a href="dietacarnivora.html">Dieta carnivora</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                        <li> <a href="tienda.html">Tienda</a> </li>
+                        <li><a href="#cart" class="cart-link"><img src="img/carrito-removebg-preview.png" alt=""> (<span
+                                    id="cart-count">0</span>)</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+
+            <div class="bienvenida">
+                <div class="carousel">
+
+                    <div class="slide"><img src="img/q.png" alt="Imagen 1"></div>
+                    <div class="slide"><img src="img/w.png" alt="Imagen 2"></div>
+                    <div class="slide"><img src="img/e.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/r.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/t.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/y.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/u.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/i.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/o.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/p.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/a.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/s.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/d.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="img/f.png" alt="Imagen 3"></div>
+                </div>
+
+
+                <div class="carusel1">
+                    <h1 class="h111">Bienvenido a Nuestra Tienda</h1>
+                    <p class="pcolor">" Descubre productos de alta calidad diseñados para potenciar tu rendimiento
+                        físico. Desde equipos de entrenamiento hasta suplementos de nutrición, ofrecemos todo lo que
+                        necesitas para alcanzar tus objetivos y mejorar tu estilo de vida fitness. Nos especializamos en
+                        brindarte soluciones eficientes y efectivas para que cada entrenamiento cuente " ¡Explora nuestra
+                        selección y encuentra los aliados perfectos para tu progreso!</p>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="products" id="products">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="products-1" id="product-list">
+
+            </div>
+        </div>
+    </section>
+
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+
+        <section class="cart" id="cart">
+            <div class="container">
+                <h2>Tu Carrito</h2>
+                <div id="cart-items"></div>
+                <div id="cart-total">
+                    <h1>Total: $0.00 COP </h1>
+                </div>
+
+                <button id="openModal">Pagar</button>
+                <div id="no-products-warning" style="color: red; display: none;"></div>
+
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="borde-animado"></div>
+                        <span class="close">&times;</span>
+                        <h2 class="metodo">Métodos de Pago</h2>
+                        <a href="https://transacciones.nequi.com/bdigital/login.jsp"
+                            style="color: white; text-decoration: none;" target="_blank"><button
+                                class="payment-button">Nequi</button></a>
+                        <a href="https://nuevaversion.bbvanet.com.co/loginAEM.html"
+                            style="color: white; text-decoration: none;" target="_blank"> <button
+                                class="payment-button">BBVA</button></a>
+                        <a href="https://sucursalpersonas.transaccionesbancolombia.com/mua/USER?scis=rB6dnGftx88jSXs2uV7zzZNR7d5ok561DXQuxY0DO7s%3D#no-back-button"
+                            style="color: white; text-decoration: none;" target="_blank"> <button
+                                class="payment-button">Bancolombia</button></a>
+                    </div>
+                </div>
+
+                <script>
+
+                    var modal = document.getElementById("myModal");
+
+                    var btn = document.getElementById("openModal");
+                    var span = document.getElementsByClassName("close")[0];
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                    }
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                    function pagar(metodo) {
+                        alert("Seleccionaste pagar con: " + metodo);
+                        modal.style.display = "none";
+                    }
+                </script>
+    </body>
+
+    </section>
+
+    <script src="tienda.js"></script>
+    <script src="carousel.js"></script>
+    <center><button id="btnArriba" onclick="irArriba()">Subir</button> </center>
+
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById("btnArriba");
+            btn.style.display = "block";
+        };
+
+        function irArriba() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
+
+<footer class="footer container">
+
+    <div class="link">
+        <h3>Facebook</h3>
+        <ul>
+            <li><a href="">David Reyes</a></li>
+            <li><a href="#">Jordan Castaño</a></li>
+            <li><a href="#">Angel Mendoza</a></li>
+            <li><a href="#">Diego Moncada</a></li>
+        </ul>
+    </div>
+
+    <div class="link">
+        <h3>Instagram</h3>
+        <ul>
+            <li><a href="#">@david_reyes18_</a></li>
+            <li><a href="#">@jordan_acevedo</a></li>
+            <li><a href="#">@angelmendoza</a></li>
+            <li><a href="#">@diego_m.o</a></li>
+        </ul>
+    </div>
+
+    <div class="link">
+        <h3>Tik Tok</h3>
+        <ul>
+            <li><a href="#">@david_reyes1156</a></li>
+            <li><a href="#">@jordancastaño</a></li>
+            <li><a href="#">@angelmendoza</a></li>
+            <li><a href="#">@diegobinario01</a></li>
+        </ul>
+    </div>
+
+    <div class="link">
+        <h3>E-MAIL</h3>
+        <ul>
+            <li><a href="#">jesusreyescuellar7@gmail.com</a></li>
+            <li><a href="#">jcastanoacevedo48@gmail.com</a></li>
+            <li><a href="#">panchitoarroz@gmail.com</a></li>
+            <li><a href="#">diegomoncada0703@gmail.com</a></li>
+        </ul>
+    </div>
+
+</footer>
+
+</body>
+
+</html>
